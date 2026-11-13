@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StreamFree — Filmes e novelas grátis</title>
+  <meta name="description" content="Assista filmes e novelas gratuitos: domínio público, licenças abertas e conteúdo autorizado.">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="/">Stream<span>Free</span></a>
+    <nav class="tabs" id="tabs">
+      <button data-type="all" class="active">Tudo</button>
+      <button data-type="movie">Filmes</button>
+      <button data-type="novela">Novelas</button>
+      <button data-type="series">Séries</button>
+      <button data-type="list">Minha lista</button>
+    </nav>
+    <form class="search" id="search" role="search">
+      <input id="q" type="search" placeholder="Buscar títulos…" aria-label="Buscar">
+    </form>
+  </header>
+
+  <main>
+    <section class="hero" id="hero" hidden>
+      <div class="hero-bg" id="heroBg"></div>
+      <div class="hero-body">
+        <h1 id="heroTitle"></h1>
+        <p id="heroSyn"></p>
+        <button class="btn primary" id="heroPlay">▶ Assistir</button>
+      </div>
+    </section>
+
+    <div class="filters">
+      <select id="genre" aria-label="Gênero"><option value="">Todos os gêneros</option></select>
+    </div>
+
+    <section id="continue" hidden>
+      <h2>Continuar assistindo</h2>
+      <div class="grid" id="continueGrid"></div>
+    </section>
+
+    <section>
+      <h2 id="gridTitle">Catálogo</h2>
+      <div class="grid" id="grid"></div>
+      <p class="empty" id="empty" hidden>Nenhum título encontrado.</p>
+      <button class="btn" id="more" hidden>Carregar mais</button>
+    </section>
+  </main>
+
+  <dialog id="player">
+    <div class="player-head">
+      <h3 id="pTitle"></h3>
+      <div>
+        <button class="btn small" id="pFav"></button>
+        <button class="btn small" id="pClose" aria-label="Fechar">✕</button>
+      </div>
+    </div>
+    <div class="stage" id="stage"></div>
+    <p class="meta" id="pMeta"></p>
+    <p class="syn" id="pSyn"></p>
+    <ol class="episodes" id="episodes" hidden></ol>
+  </dialog>
+
+  <footer>
+    <p>StreamFree reúne apenas conteúdo em domínio público, com licença aberta ou autorizado pelos detentores dos direitos.
+       Os vídeos são exibidos pelos players oficiais do Internet Archive e do YouTube.</p>
+  </footer>
+
+  <script src="/app.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>StreamFree — Admin</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="admin">
+    <h1>Painel admin</h1>
+    <p><a href="/" style="color:var(--accent)">← Voltar ao site</a></p>
+
+    <fieldset>
+      <legend>Acesso</legend>
+      <label for="token">ADMIN_TOKEN</label>
+      <input id="token" type="password" autocomplete="off" placeholder="o mesmo valor definido no servidor">
+    </fieldset>
+
+    <fieldset>
+      <legend>Buscar no Internet Archive (filmes)</legend>
+      <div class="row">
+        <div><label for="aq">Termo de busca</label><input id="aq" placeholder="ex.: nosferatu"></div>
+        <div style="align-self:end"><button class="btn" id="aSearch" type="button">Buscar</button></div>
+      </div>
+      <div class="results" id="aResults"></div>
+      <p class="msg" id="aMsg"></p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Adicionar título manualmente</legend>
+      <form id="addForm">
+        <div class="row">
+          <div><label>Tipo</label>
+            <select name="type" id="type">
+              <option value="movie">Filme</option>
+              <option value="novela">Novela</option>
+              <option value="series">Série</option>
+            </select>
+          </div>
+          <div><label>Ano</label><input name="year" type="number" min="1890" max="2100"></div>
+        </div>
+        <label>Título</label><input name="title" required>
+        <label>Gêneros (separados por vírgula)</label><input name="genres" placeholder="Drama, Romance">
+        <label>Sinopse</label><textarea name="synopsis"></textarea>
+        <label>URL do pôster (https, opcional)</label><input name="poster" type="url">
+        <label>Base legal / licença (obrigatório)</label>
+        <input name="license" required placeholder="Ex.: Conteúdo próprio · Domínio público · CC BY 4.0 · Autorizado por [titular]">
+
+        <div class="row">
+          <div><label>Tipo de fonte</label>
+            <select name="stype">
+              <option value="youtube">YouTube (ID do vídeo)</option>
+              <option value="archive">Internet Archive (identifier)</option>
+              <option value="mp4">MP4 (URL https)</option>
+              <option value="hls">HLS .m3u8 (URL https)</option>
+            </select>
+          </div>
+          <div id="singleSrc"><label>Valor da fonte (filme)</label><input name="svalue" placeholder="ex.: dQw4w9WgXcQ"></div>
+        </div>
+
+        <div id="epBox" hidden>
+          <label>Episódios — uma linha por episódio no formato: <code>Título do episódio | valor da fonte</code></label>
+          <textarea name="episodes" placeholder="Capítulo 1 | ID_OU_URL&#10;Capítulo 2 | ID_OU_URL"></textarea>
+        </div>
+
+        <p style="margin-top:14px"><label style="display:inline"><input type="checkbox" name="featured" style="width:auto"> Destacar na home</label></p>
+        <button class="btn primary" type="submit">Salvar título</button>
+        <p class="msg" id="addMsg"></p>
+      </form>
+    </fieldset>
+
+    <fieldset>
+      <legend>Catálogo atual</legend>
+      <div class="results" id="catalog"></div>
+    </fieldset>
+  </div>
+  <script src="/admin.js" type="module"></script>
+</body>
+</html>

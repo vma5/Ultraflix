@@ -1,0 +1,17 @@
+{
+  "name": "streamfree",
+  "version": "1.0.0",
+  "description": "Plataforma gratuita de filmes e novelas com conteúdo legal (domínio público, licenças abertas e conteúdo próprio)",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

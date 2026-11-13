@@ -1,0 +1,95 @@
+[
+  {
+    "id": "novela-teste-efdf7f",
+    "type": "novela",
+    "title": "Novela Teste",
+    "year": null,
+    "genres": [],
+    "synopsis": "",
+    "poster": "",
+    "license": "Conteúdo próprio",
+    "featured": false,
+    "addedAt": "2026-11-13T01:14:19.434Z",
+    "episodes": [
+      {
+        "n": 1,
+        "title": "Cap 1",
+        "source": {
+          "type": "youtube",
+          "value": "aqz-KE-bpKQ"
+        }
+      }
+    ]
+  },
+  {
+    "id": "noite-dos-mortos-vivos-1968",
+    "type": "movie",
+    "title": "A Noite dos Mortos-Vivos (Night of the Living Dead)",
+    "year": 1968,
+    "genres": [
+      "Terror",
+      "Clássicos"
+    ],
+    "synopsis": "Um grupo de desconhecidos se refugia em uma casa de fazenda enquanto os mortos voltam à vida. Clássico do terror independente.",
+    "poster": "",
+    "license": "Domínio público (EUA) — hospedado no Internet Archive",
+    "featured": true,
+    "addedAt": "2026-11-12T00:00:00.000Z",
+    "source": {
+      "type": "archive",
+      "value": "night_of_the_living_dead"
+    }
+  },
+  {
+    "id": "plano-9-do-espaco-sideral-1959",
+    "type": "movie",
+    "title": "Plano 9 do Espaço Sideral (Plan 9 from Outer Space)",
+    "year": 1959,
+    "genres": [
+      "Ficção científica",
+      "Clássicos"
+    ],
+    "synopsis": "Alienígenas tentam impedir os humanos de criar uma arma capaz de destruir o universo, ressuscitando os mortos.",
+    "poster": "",
+    "license": "Domínio público (EUA) — hospedado no Internet Archive",
+    "featured": true,
+    "addedAt": "2026-11-12T00:00:00.000Z",
+    "source": {
+      "type": "archive",
+      "value": "Plan_9_from_Outer_Space_1959"
+    }
+  },
+  {
+    "id": "websérie-demo",
+    "type": "series",
+    "title": "Websérie de Demonstração",
+    "year": 2008,
+    "genres": [
+      "Animação",
+      "Demo"
+    ],
+    "synopsis": "Série fictícia só para demonstrar o player de episódios (mp4 e HLS). Usa o curta Big Buck Bunny, da Blender Foundation (CC BY 3.0). Substitua pelos seus próprios conteúdos.",
+    "poster": "",
+    "license": "CC BY 3.0 — (c) Blender Foundation | www.blender.org",
+    "featured": true,
+    "addedAt": "2026-11-12T00:00:00.000Z",
+    "episodes": [
+      {
+        "n": 1,
+        "title": "Episódio 1 (MP4)",
+        "source": {
+          "type": "mp4",
+          "value": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+        }
+      },
+      {
+        "n": 2,
+        "title": "Episódio 2 (HLS)",
+        "source": {
+          "type": "hls",
+          "value": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
+        }
+      }
+    ]
+  }
+]
